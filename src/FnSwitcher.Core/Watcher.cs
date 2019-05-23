@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -24,7 +23,7 @@ namespace FnSwitcher.Core
 
         public async Task<bool> InitAsync()
         {
-            keyboard = await FindDeviceAsync();
+            keyboard = await DeviceManager.FindDeviceAsync();
             timer.Change(TimeSpan.FromSeconds(30), TimeSpan.FromSeconds(30));
             return keyboard != null;
         }
@@ -33,47 +32,12 @@ namespace FnSwitcher.Core
         {
             if (keyboard == null)
             {
-                keyboard = await FindDeviceAsync();
+                keyboard = await DeviceManager.FindDeviceAsync();
             }
 
             await keyboard?.EnableFunctionKeysAsync();
         }
 
-        private async Task<K380> FindDeviceAsync()
-        {
-            async Task<K380> SelectWorkingAsync(List<K380> devices)
-            {
-                foreach (K380 device in devices)
-                {
-                    var open = device.Open();
-                    if (!open)
-                    {
-                        continue;
-                    }
 
-                    var write = await device.EnableFunctionKeysAsync();
-                    if (!write)
-                    {
-                        continue;
-                    }
-
-                    return device;
-                }
-
-                return null;
-            }
-
-            List<K380> all = DeviceManager.Enumerate();
-            try
-            {
-                var working = await SelectWorkingAsync(all);
-                all.Remove(working);
-                return working;
-            }
-            finally
-            {
-                all.ForEach(d => d.Dispose());
-            }
-        }
     }
 }

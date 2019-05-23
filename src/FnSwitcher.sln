@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FnSwitcher.Core", "FnSwitcher.Core\FnSwitcher.Core.csproj", "{94F5B995-2EA9-4FC9-9712-8B290091159F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FnSwitcher.Core", "FnSwitcher.Core\FnSwitcher.Core.csproj", "{94F5B995-2EA9-4FC9-9712-8B290091159F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FnSwitcher.Service", "FnSwitcher.Service\FnSwitcher.Service.csproj", "{CA873767-0A21-41FA-A491-A5D6238FA596}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FnSwitcher.Service", "FnSwitcher.Service\FnSwitcher.Service.csproj", "{CA873767-0A21-41FA-A491-A5D6238FA596}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FnSwitcher.App", "FnSwitcher.App\FnSwitcher.App.csproj", "{946CEEB8-75CB-4168-B7B6-FF828495220E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CA873767-0A21-41FA-A491-A5D6238FA596}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA873767-0A21-41FA-A491-A5D6238FA596}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA873767-0A21-41FA-A491-A5D6238FA596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{946CEEB8-75CB-4168-B7B6-FF828495220E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{946CEEB8-75CB-4168-B7B6-FF828495220E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{946CEEB8-75CB-4168-B7B6-FF828495220E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{946CEEB8-75CB-4168-B7B6-FF828495220E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
